@@ -40,7 +40,7 @@ $("#add-train-btn").on("click", function(event) {
   var diffTime = moment().diff(moment(trainStart, "HH:mm").subtract(1, "years"), "minutes");
   var Remainder = diffTime % frequency1;
   var MinutesTillTrain = frequency1 - Remainder;
-  var TrainTime = currentTime.add(MinutesTillTrain,'minutes').format("HH:mm");
+  var TrainTime = currentTime.add(MinutesTillTrain,'minutes').format("HH:mm A");
   console.log(TrainTime);
   // Creates local "temporary" object for holding employee data
   var newTrain = {
